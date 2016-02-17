@@ -3,7 +3,7 @@ date_default_timezone_set("PRC");
 //数据库配置信息，根据情况修改，否则无法安装
 $db_servername="localhost";//Mysql服务器地址 
 $db_username="root";//数据库用户名 
-$db_password="SfcCq@123$";//数据库密码 
+$db_password="";//数据库密码 
 $db_dbname="selfbank";//数据库
 $qianzui="selfbank_";//表前缀
 $conn=mysql_connect($db_servername,$db_username,$db_password);

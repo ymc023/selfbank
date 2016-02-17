@@ -4,6 +4,8 @@ SelfBank
 SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！
 运行环境:php >=5.4, (nginx/apache/...),(Mysql/MariaDB)
 安装前提:准备好web服务器，安装好数据库及php.当然，你还要有数据库的root账号及密码
+默认账号:selfbank,selfbankl为连接数据默认账号！admin,admin@admin 为登录系统默认账号
+
 
 -----
 
@@ -17,80 +19,33 @@ SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！
   $db_username="root";//数据库用户名 
   $db_password="$@albck$#－*723";//数据库密码 
   $db_dbname="selfbank";//数据库
-  $qianzui="selfbank_";//表前缀
- 4.配置好web服务，打开http://serverip or domainname/install.php
- 5.系统默认会创建selfbank账号与密码，请更新到config.php中。不介意也可以用root
+  $qianzui="selfbank_";//表前缀 4.配置好web服务，打开http://serverip or domainname/install.php 5.系统默认会创建selfbank账号与密码，请更新到config.php中。不介意也可以用root
+
+
+ 使用(Usage)
 -
-
-
-Usage
--
-`rm [OPTION]...FILE...`
-
-
+ 1. 安装页面  http://serverip/install.php  
+ https://github.com/ymc023/selfbank/readmeimg/install.jpg
+ 2. 登录页面  http://serverip/
+ https://github.com/ymc023/selfbank/readmeimg/login.jpg
+ 3. 首页显示  http://serverip/index.php
+ https://github.com/ymc023/selfbank/readmeimg/index-char.jpg
+ 4. 图片导出  
+ https://github.com/ymc023/selfbank/readmeimg/chart-download.jpg
+ 5. 新建分类
+ https://github.com/ymc023/selfbank/readmeimg/new-class.jpg
+ 6. 添加记录
+ https://github.com/ymc023/selfbank/readmeimg/add.jpg
+ 7. 账目修改
+ https://github.com/ymc023/selfbank/readmeimg/change.jpg
+ 8. 账务查询
+ https://github.com/ymc023/selfbank/readmeimg/search.jpg
+ https://github.com/ymc023/selfbank/readmeimg/search-2.jpg
+ 9. 修改密码
+ https://github.com/ymc023/selfbank/readmeimg/password-change.jpg
 
 COPYRIGHT
----------
-Copyright (C) 2013, Ahmed Abdel Razzak. All rights reserved.
+--------
+Copyright (C) 2016, ymc023. All rights reserved.
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License.
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation; version 2 of the License.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59
-Temple Place, Suite 330, Boston, MA 02111-1307 USA or see http://www.gnu.org/licenses/.
-
-<?php
-date_default_timezone_set("PRC");
-//数据库配置信息，根据情况修改，否则无法安装
-$db_servername="localhost";//Mysql服务器地址 
-$db_username="root";//数据库用户名 
-$db_password="SfcCq@123$";//数据库密码 
-$db_dbname="selfbank";//数据库
-$qianzui="selfbank_";//表前缀
-$conn=mysql_connect($db_servername,$db_username,$db_password);
-if(indatabase($db_dbname,$conn)){
-  mysql_select_db($db_dbname,$conn);
-  mysql_query('SET NAMES utf8');
-}
-
-Function user_shell($uid,$shell)
-{
-  $sqlshell="SELECT * FROM `selfbank_user` WHERE `uid` = '$uid'";
-  $query=mysql_query($sqlshell);
-  $exist=is_array($row=mysql_fetch_array($query));
-  $exist2=$exist?$shell==md5($row['username'].$row['password']):FALSE;
-  if($exist2)
-   {  return $row;  }
-  else
-   {  
-    header("Location:login.php");
-   exit();
-    }
-} 
-   
-   
-date_default_timezone_set("Asia/Shanghai");
-
-function user_mktime($onlinetime) {  $new_time = mktime();   if (($new_time - $onlinetime) > '900') {  session_destroy();   echo "登陆超时";  exit ();  } else {   $_SESSION['times'] = mktime();  }  } 
-
-
-function indatabase($db_dbname,$conn){
-  mysql_select_db("information_schema",$conn);
-  $sql="select * from SCHEMATA where SCHEMA_NAME='".$db_dbname."'";
-  $query=mysql_query($sql);
-  $indb=is_array($row=mysql_fetch_array($query));
-  return $indb;
-}
-function intable($dbname,$tablename,$conn){
-  mysql_select_db("information_schema",$conn);
-  $sql="select * from TABLE_CONSTRAINTS where TABLE_SCHEMA='".$dbname."' and TABLE_NAME='".$tablename."'";
-  $query=mysql_query($sql);
-  $intable=is_array($row=mysql_fetch_array($query));
-  mysql_select_db($dbname,$conn);//重新关联账本数据库
-  return $intable;
-}
-
-?>

@@ -4,8 +4,8 @@ Author:ymc023 Email:ymc023@163.com
 
 ###前言
 ____
-SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！<br>
-运行环境:<br>
+SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！需要服务器连接网络才能使用jquery.js <br>
+>运行环境:<br>
 >php >=5.4, (nginx/apache/...),(Mysql/MariaDB)<br>
 安装前提:<br>
 >准备好web服务器，安装好数据库及php.当然，你还要有数据库的root账号及密码.<br>
@@ -46,7 +46,7 @@ ____
 >2. 登录页面  http://serverip/
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/login.jpg)
 >3. 首页显示  http://serverip/index.php
->![](https://github.com/ymc023/selfbank/blob/master/readmeimg/index.jpg)
+>![](https://github.com/ymc023/selfbank/blob/master/readmeimg/index-chart.jpg)
 >4. 图片导出  
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/chart-download.jpg)
 >5. 新建分类

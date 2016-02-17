@@ -20,13 +20,13 @@ ____
 >2.cp -rf selfbank/ /var/www/....  //copy php源文件到www或其他自定义路径下 <br>
 >3.vi selbank/config.php <br>
 ```
-$db_servername="localhost";//Mysql服务器地址 <br> 
+$db_servername="localhost";//修改成自己Mysql服务器地址 <br> 
 ```
 ```
-$db_username="root";//数据库用户名 <br>
+$db_username="root";//修改成自己数据库用户名 <br>
 ```
 ```
-$db_password="$@albck$#－*723";//数据库密码 <br> 
+$db_password="$@albck$#－*723";//修改成自己数据库密码 <br>  
 ```
 ```
 $db_dbname="selfbank";//数据库 <br>
@@ -58,6 +58,7 @@ ____
 >8. 账务查询
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/search.jpg)
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/search-2.jpg)
+<br>
 >9. 修改密码
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/password-change.jpg)
 

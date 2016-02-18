@@ -4,7 +4,10 @@ Author:ymc023 Email:ymc023@163.com
 
 ###前言
 ____
-SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！需要服务器连接网络才能使用jquery.js <br>
+##### SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！ <br>
+##### SelfBank 包含自定义收入/支出账务类型，记流水账，账目内容修改，及按需查询及导出成excel <br>
+##### SelfBank 使用highcharts生成直观的图表显示！可导出JPG.PDF等格式的图表数据！<br>
+ 
 >运行环境:<br>
 >php >=5.4, (nginx/apache/...),(Mysql/MariaDB)<br>
 安装前提:<br>
@@ -16,7 +19,7 @@ SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！需要服
 ###注意
 >需要使用google chrome才能保证日期选择正常使用！<br>
 >需要服务器正常连接互连网，才能保证首页的图像正常显示，否则首页是一片空白！(因为jquery.js是cdn上的)<br>
-
+>账务明细导出成csv / excel，如果乱码！请按如下方法操作: 查询-->导出csv 会生一个为*.csv/xls的文件。用记事本打开-->另存为-->选择编码为Unicode 或是Utf-8 <br>
 ###安装
 ____
 ##### 可用install.php安装sql.也可以用source selfbank.sql

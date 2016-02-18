@@ -13,7 +13,7 @@ SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！需要服
 >selfbank,selfbank 为连接数据库创建的默认账号！<br>
 >admin,admin@admin 为登录系统默认账号 !<br>
 
-###注意:
+###注意
 >需要使用google chrome才能保证日期选择正常使用！<br>
 >需要服务器正常连接互连网，才能保证首页的图像正常显示，否则首页是一片空白！(因为jquery.js是cdn上的)<br>
 
@@ -43,7 +43,7 @@ $qianzui="selfbank_";//表前缀
 
 ====
 
-###使用(Usage)
+###使用
 ____
 >1.安装页面  http://serverip/install.php
 >![](https://github.com/ymc023/selfbank/blob/master/readmeimg/install.jpg) 

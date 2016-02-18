@@ -10,8 +10,8 @@ SelfBank 是一个用php+js写的B/S个人(家庭)账务管理系统！需要服
 安装前提:<br>
 >准备好web服务器，安装好数据库及php.当然，你还要有数据库的root账号及密码.<br>
 默认账号:<br>
->selfbank,selfbank 为连接数据默认账号！<br>
->admin,admin@admin 为登录系统默认账号 <br>
+>selfbank,selfbank 为连接数据库创建的默认账号！<br>
+>admin,admin@admin 为登录系统默认账号 !<br>
 
 ###安装
 ____

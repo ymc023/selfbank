@@ -20,19 +20,19 @@ ____
 >2.cp -rf selfbank/ /var/www/....  //copy php源文件到www或其他自定义路径下 <br>
 >3.vi selbank/config.php <br>
 ```
-$db_servername="localhost";//修改成自己Mysql服务器地址 <br> 
+$db_servername="localhost";//修改成自己Mysql服务器地址 
 ```
 ```
-$db_username="root";//修改成自己数据库用户名 <br>
+$db_username="root";//修改成自己数据库用户名 
 ```
 ```
-$db_password="$@albck$#－*723";//修改成自己数据库密码 <br>  
+$db_password="$@albck$#－*723";//修改成自己数据库密码  
 ```
 ```
-$db_dbname="selfbank";//数据库 <br>
+$db_dbname="selfbank";//数据库 
 ```
 ```
-$qianzui="selfbank_";//表前缀  <br>
+$qianzui="selfbank_";//表前缀  
 ```
 >4.配置好web服务，打开http://serverip or domainname/install.php <br>
 >5.系统默认会创建selfbank账号与密码，请更新到config.php中。<br>

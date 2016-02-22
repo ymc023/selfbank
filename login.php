@@ -1,5 +1,6 @@
 <?php session_start();
-#Authon:ymc023
+#Author:ymc023
+#Email:ymc023@163.com
 #Date:2016.01.10
 #Platform:Centos7+php+mysql+nginx
 ?>

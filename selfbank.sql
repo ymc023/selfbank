@@ -19,7 +19,7 @@
 -- Table structure for table `selfbank_account`
 --
 
-DROP database IF EXISTS `selfbank`;
+drop database IF EXISTS `selfbank`;
 create database `selfbank` default character set utf8;
 grant all privileges on selfbank.* to selfbank@localhost indetified by 'selfbank';
 flush privileges;

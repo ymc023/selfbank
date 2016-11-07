@@ -228,7 +228,7 @@ var daochu = (function() {
 				$sqlclassid="acclassid=".$_POST[classid];
                                 $sqltime="actime >='".$_POST[time1]." 00:00:00' and actime <='".$_POST[time2]." 23:59:59'";
 
-				echo $sql="select * from selfbank_account where ".$sqlclassid." and ".$sqltime." and jiid='$_SESSION[uid]' ORDER BY actime DESC";
+				#echo $sql="select * from selfbank_account where ".$sqlclassid." and ".$sqltime." and jiid='$_SESSION[uid]' ORDER BY actime DESC";
 			
 			}
 			

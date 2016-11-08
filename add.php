@@ -14,7 +14,7 @@ if($_GET[Submit]){
             echo "<script> alert('还没输入金额!');</script>";
         }
         else{
-         $sql="insert into selfbank_account (acmoney, acclassid, actime, acremark,jiid,zhifu) values ('$_GET[money]', '$_GET[classid]', '$time100 $time', '$_GET[remark]', '$_SESSION[uid]', '$_GET[zhifu]')";
+         $sql="insert into selfbank_account (acmoney, acclassid, actime, acremark,jiid,zhifu) values ('$_GET[money]', '$_GET[classid]', '$time100 $time', '$_GET[remark]', '$_SESSION[uid]', '0')";
          $query=mysql_query($sql);
 	  if($query)
                 { echo "<script> alert('添加账目成功!');window.location.href='index.php'</script>";
